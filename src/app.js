@@ -53,7 +53,7 @@ app.get('/weather', (req, res) => {
 			return res.send({ error });
 		}
 		console.log({ latitude, longitude, location });
-		forecast(latitude, longitude, (error, { cast, temperature, feel } = {}) => {
+		forecast(latitude, longitude, (error, { cast, temperature, feel, humidity, wind_speed } = {}) => {
 			if (error) {
 				return res.send({ error });
 			}
@@ -63,7 +63,9 @@ app.get('/weather', (req, res) => {
 				{
 					cast,
 					temperature,
-					feel
+					feel,
+					humidity,
+					wind_speed
 				}
 			);
 		});

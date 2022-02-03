@@ -44,7 +44,12 @@ weatherForm.addEventListener('submit', (event) => {
 				data.temperature +
 				' degree out. It feels like ' +
 				data.feel +
-				' degrees out.';
+				' degrees out. ' +
+				'The humidity is ' +
+				data.humidity +
+				'. The wind speed is ' +
+				data.wind_speed +
+				'.';
 			console.log(
 				data.cast +
 					'. It is currently ' +
